@@ -13,7 +13,7 @@ export default function Footer() {
         <li className="hover:text-yellow-500 text-lg mb-5 "> World news</li>
       </ul>
     </div>
-    <div className="footrtTwo">
+    <div className="footerTwo">
       <div className="flex flex-col align-middle items-center justify-start gap-2">
         {" "}
         <div className="flex flex-col align-middle items-center justify-start gap-2 ">
