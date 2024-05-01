@@ -9,7 +9,8 @@ import {
 import './index.css'
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
-import Home from './routes/home';
+import NewsArticles from './routes/newsArticles';
+import NewsArticle from './routes/newsArticle';
 
 const router = createBrowserRouter([
   {
@@ -19,21 +20,25 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <NewsArticles/>
     
       },
-    ],
+      {
+        path: "/articles",
+        element: <NewsArticles/>
+    
+      },
+      {
+          path: "articles/:articleId",
+          element: <NewsArticle/>,
+      }
+    ]
 
-    // children: [
-    //   {
-    //     path: "contacts/:contactId",
-    //     element: <Contact />,
-    //   },
-    // ],
+   
 
     // <Link to={`contacts/1`}>Your Name</Link>
 
-  },
+  }
 
 ]);
 
