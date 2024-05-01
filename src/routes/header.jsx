@@ -6,7 +6,7 @@ export default function Header() {
     <>
   <header className=" bg-stone-100">
     <section className=" headerOne mt-3 bg-stone-100 flex flex-row align-middle justify-center">
-      <img src="./logo.png" alt="logo" />
+      <img src="../logo.png" alt="logo" />
     </section>
     <section className="headerTwo p-4  flex flex-row align-middle justify-evenly bg-stone-100">
       <nav>
@@ -33,13 +33,7 @@ export default function Header() {
       </div>
     </section>
   </header>
-  <main>
-    <div className="sectionOne flex flex-row align-middle  justify-center">
-      <h1 className="animate-pulse mt-5 mainHeading  font-mono text-2xl font-bold mb-8">
-        Hot news at your fingertip
-      </h1>
-    </div>
-  </main>
+
 </>
 
 
