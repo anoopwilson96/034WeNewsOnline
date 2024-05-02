@@ -4,7 +4,7 @@ import { Outlet, Link,useLoaderData, } from "react-router-dom";
 
 
 export async function loader() {
-  const response = await fetch('https://gnews.io/api/v4/search?q=example&lang=en&country=in&max=10&apikey=63635babfcffd0b0261f8cb2b1078180')
+  const response = await fetch('https://gnews.io/api/v4/search?q=example&lang=en&country=in&max=10&apikey=f0168094ea9df2f5fae1551f9a16e325')
   const data = await response.json()
   return {data}
 }
