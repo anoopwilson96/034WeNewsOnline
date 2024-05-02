@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <NewsArticles/>,
         loader: articlesLoader,
-        index: true
+        
         
         
     
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         path: "/articles",
         element: <NewsArticles/>,
         loader: articlesLoader,
-        index: true
+        
         
         
     
