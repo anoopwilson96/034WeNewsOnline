@@ -9,7 +9,7 @@ import {
 import './index.css'
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
-import NewsArticles from './routes/newsArticles';
+import NewsArticles,{loader as articlesLoader} from './routes/newsArticles';
 import NewsArticle from './routes/newsArticle';
 
 const router = createBrowserRouter([
@@ -18,16 +18,28 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
+,
       {
         path: "/",
-        element: <NewsArticles/>
+        element: <NewsArticles/>,
+        loader: articlesLoader,
+        index: true
+        
+        
     
       },
       {
         path: "/articles",
-        element: <NewsArticles/>
+        element: <NewsArticles/>,
+        loader: articlesLoader,
+        index: true
+        
+        
     
       },
+
+
+
       {
           path: "articles/:articleId",
           element: <NewsArticle/>,

@@ -22,9 +22,9 @@ export default function NewsArticle() {
           <h3 className="mt-2 mb-2"> Description about the news article div will be here.</h3>
       
 
-        <button className="bg-slate-400 p-2 border-none rounded-full m-2 cursor-pointer">
+        <a href="#" className='self-center'><button className="  bg-slate-400 p-2 border-none rounded-full m-2 cursor-pointer">
         Know More
-        </button>
+        </button></a>
       </div>
       
     </div>
