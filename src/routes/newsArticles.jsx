@@ -35,8 +35,8 @@ export default function NewsArticles() {
             <h3 className="mt-2 mb-2">
               {article.description}
             </h3>
-            <Link className="" to={`/articles/article`}>
-              <button className=" self-center bg-slate-400 p-2 border-none rounded-full m-2">
+            <Link className="self-center" to={`/articles/article`}>
+              <button className="  bg-slate-400 p-2 border-none rounded-full m-2">
                 Read more
               </button>
             </Link>
