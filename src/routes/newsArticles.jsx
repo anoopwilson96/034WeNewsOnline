@@ -30,12 +30,12 @@ export default function NewsArticles() {
             key={article.id || index}
             className="blog-card max-w-64 m-5 cursor-pointer p-3 border rounded-md border-slate-400 flex flex-col justify-between align-middle"
           >
-            <img src={article.image} alt={article.title} />
+            <img className='max-h-32' src={article.image} alt={article.title} />
             <h2 className="text-xl font-semibold mt-3">{article.title}</h2>
             <h3 className="mt-2 mb-2">
               {article.description}
             </h3>
-            <Link className="self-center" to={`/articles/article`}>
+            <Link className="self-center" to={article.url}>
               <button className="  bg-slate-400 p-2 border-none rounded-full m-2">
                 Read more
               </button>
