@@ -30,7 +30,7 @@ export default function NewsArticles() {
             key={article.id || index}
             className=" mx-auto max-w-64 m-5 cursor-pointer p-3 border rounded-md border-slate-400 flex flex-col  align-middle"
           >
-            <img className='max-h-32' src={article.image} alt={article.title} />
+            <img className='max-h-32 rounded-md' src={article.image} alt={article.title} />
             <h2 className="text-xl font-semibold mt-3">{article.title}</h2>
             <h3 className="mt-2 mb-2">
               {article.description}
