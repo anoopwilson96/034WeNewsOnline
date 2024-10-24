@@ -5,12 +5,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-
 import './index.css'
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import NewsArticles,{loader as articlesLoader} from './routes/newsArticles';
-import NewsArticle from './routes/newsArticle';
+
 
 const router = createBrowserRouter([
   {
@@ -22,33 +21,15 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <NewsArticles/>,
-        loader: articlesLoader,
-        
-        
-        
-    
+        loader: articlesLoader
       },
       {
         path: "/articles",
         element: <NewsArticles/>,
-        loader: articlesLoader,
-        
-        
-        
-    
-      },
-
-
-
-      {
-          path: "articles/:articleId",
-          element: <NewsArticle/>,
+        loader: articlesLoader     
       }
     ]
 
-   
-
-    // <Link to={`contacts/1`}>Your Name</Link>
 
   }
 
