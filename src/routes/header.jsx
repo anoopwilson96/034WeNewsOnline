@@ -18,19 +18,7 @@ export default function Header() {
           <li className="hidden sm:block md:block">Movies</li>
         </ul>
       </nav>
-      <div className="searchHeader flex align-middle  justify-center gap-2">
-        <input
-          className=" border border-double border-zinc-300 p-2 rounded-full"
-          type="text"
-          placeholder="search"
-        />
-        <button type="submit">
-          <span className=" rounded-none border-none border-zinc-300 searchIcon material-symbols-outlined">
-            {" "}
-            search{" "}
-          </span>
-        </button>
-      </div>
+
     </section>
   </header>
 
