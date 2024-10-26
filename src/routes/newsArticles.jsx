@@ -15,12 +15,6 @@ export default function NewsArticles() {
 
   return (
     <>
-      <div className="sectionOne flex flex-row align-middle justify-center">
-        <h1 className="animate-pulse mt-5 mainHeading font-mono text-2xl font-bold mb-8">
-          Hot news at your fingertip
-        </h1>
-      </div>
-
       <div
         id="blog-container"
         className="container lg:container   sectionThree grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1"
@@ -34,6 +28,9 @@ export default function NewsArticles() {
             <h2 className="text-xl font-semibold mt-3">{article.title}</h2>
             <h3 className="mt-2 mb-2">
               {article.description}
+            </h3>
+            <h3 className="mt-2 mb-2">
+              {article.content}
             </h3>
             <Link className="self-center" to={article.url}>
               <button className="  bg-slate-400 p-2 border-none rounded-full m-2">
