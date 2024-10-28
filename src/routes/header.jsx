@@ -35,7 +35,7 @@ export default function Header() {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex space-x-2">
+          {/* <div className="flex space-x-2">
             <a href="#facebook" aria-label="Facebook" className="hover:text-yellow-400">
               <FaFacebookF />
             </a>
@@ -45,8 +45,9 @@ export default function Header() {
             <a href="#instagram" aria-label="Instagram" className="hover:text-yellow-400">
               <FaInstagram />
             </a>
-          </div>
+          </div> */}
         </div>
+        
       </div>
     </header>
   );
