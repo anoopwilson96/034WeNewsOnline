@@ -3,7 +3,7 @@ import { Outlet, Link, useLoaderData } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram, FaSearch, FaLanguage } from 'react-icons/fa';
 
 export async function loader() {
-  const response = await fetch(`https://gnews.io/api/v4/search?q=example&lang=en&country=in&max=10&apikey=${import.meta.env.VITE_API_URL0}`);
+  const response = await fetch(`https://gnews.io/api/v4/search?q=ircc&lang=en&country=ca&max=10&apikey=${import.meta.env.VITE_API_URL0}`);
   const data = await response.json();
   return { data };
 }
@@ -13,20 +13,6 @@ export default function NewsArticles() {
 
   return (
     <>
-      {/* Language Selector */}
-      <div className="flex justify-center items-center mt-4 my-8 ">
-      <FaLanguage className="text-yellow-400" />
-        <select
-          name="language"
-          id="language"
-          className="ml-2 p-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none"
-        >
-          <option value="english">English</option>
-          <option value="french">French</option>
-          <option value="hindi">Hindi</option>
-          <option value="malayalam">Malayalam</option>
-        </select>
-      </div>
 
       {/* News Articles Section */}
       <div
@@ -36,7 +22,7 @@ export default function NewsArticles() {
         {data.articles.map((article, index) => (
           <div
             key={article.id || index}
-            className="max-w-md mx-auto p-4 bg-gray-800 text-white rounded-lg shadow-md transition-transform transform hover:scale-105"
+            className="max-w-md mx-auto p-4 rounded-lg shadow-md transition-transform transform hover:scale-105"
           >
             <img
               className="w-full h-48 object-cover rounded-md mb-4"
