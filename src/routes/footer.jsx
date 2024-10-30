@@ -1,6 +1,13 @@
 
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { toast } from 'react-toastify';
+
+
+const notify = ()=>{
+  toast("Sorry, Not Yet Functional")
+}
+
 
 export default function Footer() {
   return (
@@ -11,10 +18,12 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start">
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2 text-gray-300">
-            <li className="hover:text-yellow-500">Explained News</li>
-            <li className="hover:text-yellow-500">Last Hour News</li>
-            <li className="hover:text-yellow-500">Government Updates</li>
-            <li className="hover:text-yellow-500">World News</li>
+          <div>     
+      </div>
+            <li className="hover:text-yellow-500"   onClick={notify} >Explained News</li>
+            <li className="hover:text-yellow-500"   onClick={notify} >Last Hour News</li>
+            <li className="hover:text-yellow-500"   onClick={notify} >Government Updates</li>
+            <li className="hover:text-yellow-500"   onClick={notify} >World News</li>
           </ul>
         </div>
         
@@ -36,8 +45,8 @@ export default function Footer() {
 
           {/* Contact Icons */}
           <div className="flex gap-4 mt-6">
-            <FaEnvelope size={24} className="text-gray-300 hover:text-yellow-500" />
-            <FaPhone size={24} className="text-gray-300 hover:text-yellow-500" />
+            <FaEnvelope size={24} className="text-gray-300 hover:text-yellow-500"   onClick={notify}  />
+            <FaPhone size={24} className="text-gray-300 hover:text-yellow-500"   onClick={notify}  />
           </div>
         </div>
 
@@ -45,10 +54,10 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start">
           <h3 className="text-xl font-semibold mb-4">More Info</h3>
           <ul className="space-y-2 text-gray-300">
-            <li className="hover:text-yellow-500">Subscription</li>
-            <li className="hover:text-yellow-500">Newsletter</li>
-            <li className="hover:text-yellow-500">Hiring</li>
-            <li className="hover:text-yellow-500">Contact Us</li>
+            <li className="hover:text-yellow-500"   onClick={notify} >Subscription</li>
+            <li className="hover:text-yellow-500"   onClick={notify} >Newsletter</li>
+            <li className="hover:text-yellow-500"   onClick={notify} >Hiring</li>
+            <li className="hover:text-yellow-500"   onClick={notify} >Contact Us</li>
           </ul>
         </div>
       </div>
@@ -56,11 +65,11 @@ export default function Footer() {
       {/* Footer Bottom Section */}
       <div className="border-t border-gray-700 mt-10 pt-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-400 px-4 md:px-0">
-          <p>&copy; 2024 NewsOnline. All Rights Reserved.</p>
+          <p>&copy; 2024 Your Daily News. All Rights Reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <FaFacebookF className="hover:text-yellow-500" />
-            <FaTwitter className="hover:text-yellow-500" />
-            <FaInstagram className="hover:text-yellow-500" />
+            <FaFacebookF className="hover:text-yellow-500"   onClick={notify}  />
+            <FaTwitter className="hover:text-yellow-500"   onClick={notify}  />
+            <FaInstagram className="hover:text-yellow-500"   onClick={notify}  />
           </div>
         </div>
       </div>
