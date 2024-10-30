@@ -1,64 +1,67 @@
-import React, { useState } from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaSearch, FaLanguage } from 'react-icons/fa';
-import { GiNewspaper } from 'react-icons/gi';
+import React from 'react';
+import { FaSearch, FaLanguage } from 'react-icons/fa';
 
 export default function Header() {
-
-
   return (
-< div className='bg-gray-900 text-white'>
-<header className=" p-4 shadow-lg max-w-6xl mx-auto">
+    <header className="mb-10">
+
+        <div className="flex justify-center items-center mb-4">
+          <img className="max-w-xs" src="./logo.png" alt="logo" />
+        </div>  
 
 
+      <div className="p-4 bg-gray-900 text-white shadow-lg mx-auto ">
         {/* Logo Section */}
-          <div className="flex mx-auto justify-center items-center mb-4 md:mb-0 ">
-          <GiNewspaper size={32} className="mr-4 text-yellow-400" />
-          <h1 className=" font-mono text-4xl italic font-bold">your daily news</h1>
-        </div>
 
 
-
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
-        {/* Navigation Links */}
-        <nav className="flex space-x-4 text-sm md:text-base items-center">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+          {/* Navigation and Search */}
 
 
-          <select
-          name="country"
-          id="country"
-          className=" bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none"
-        >
-          <option value="india">India</option>
-          <option value="canada">Canada</option>
-          <option value="us">US</option>
+          <nav className="flex flex-col justify-center md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 w-full ">
 
-        </select>
 
-   
+            {/* Country Selector */}
+            <select
+              name="country"
+              id="country"
+              className="bg-gray-800 text-white p-2 rounded-md hover:bg-gray-700 focus:outline-none"
+            >
+              <option value="india">India</option>
+              <option value="canada">Canada</option>
+              <option value="us">US</option>
+            </select>
 
-          {/* Other Navigation Links */}
-          <a href="#world" className="hover:text-yellow-400">World News</a>
-          <a href="#politics" className="hover:text-yellow-400">Politics</a>
-          <a href="#business" className="hover:text-yellow-400">Business</a>
-         </nav>
-        
-        {/* Search and Social Media */}
-        <div className="flex items-center space-x-4">
-          {/* Search Bar */}
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search"
-              className="bg-gray-800 text-white p-2 pl-8 rounded-md focus:outline-none w-32 md:w-48"
-            />
-            <FaSearch className="absolute left-2 top-3 text-yellow-400" />
-          </div>
-
+            {/* Navigation Links */}
+            <div className="flex space-x-4 text-sm md:text-base">
+              <a href="#politics" className="hover:text-yellow-400 transition-colors">
+                Politics
+              </a>
+              <a href="#business" className="hover:text-yellow-400 transition-colors">
+                Business
+              </a>
+              <a href="#movies" className="hover:text-yellow-400 transition-colors">
+                Movies
+              </a>
+              <a href="#tech" className="hover:text-yellow-400 transition-colors">
+                Tech
+              </a>
+            </div>
+                        {/* Search Bar */}
+                        <div className="relative md:w-64 w-full">
+              <input
+                type="text"
+                placeholder="Search"
+                className="w-full bg-gray-800 text-white p-2 pl-10 rounded-md focus:outline-none"
+              />
+              <FaSearch className="absolute left-3 top-3 text-yellow-400" />
+            </div>
+          </nav>
         </div>
       </div>
+
+
+
     </header>
-
-
-</div>
   );
 }
