@@ -8,7 +8,7 @@ import {
 import './index.css'
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
-import NewsArticles,{loader as articlesLoader} from './routes/newsArticles';
+import NewsArticles,{loader as articlesLoader} from './components/newsArticles';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
