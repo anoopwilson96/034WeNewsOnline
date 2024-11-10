@@ -34,7 +34,7 @@ export default function NewsArticles() {
             <img className="w-full h-48 object-cover rounded-md mb-4" src={article.image || `https://res.cloudinary.com/aw96/image/upload/v1731245782/450px-No_image_available.svg_vrtdnt.png)` }
             alt={article.title} />
             <h2 className="text-xl font-bold text-black-400 mb-2">{article.title}</h2>
-            <p className="text-gray-600 mb-4">{truncateText(article.description, 200)}</p>
+            <p className="text-gray-600 mb-4">{truncateText(article.description, 150)}</p>
             <Link to={article.url} target="_blank" className="self-center">
               <button className="bg-yellow-500 text-gray-900 font-semibold py-2 px-4 rounded-full hover:bg-yellow-600">
                 Read more
