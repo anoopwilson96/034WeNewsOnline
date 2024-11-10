@@ -11,7 +11,7 @@ This project is a feature-rich web application that utilizes the GNews API to fe
 
 ## Technology Stack
 - **Front-end**: React.js, React Router
-- **API**: [GNews API](https://gnews.io/)
+- **API**: [GNews io]([https://gnews.io/](https://gnews.io/))
 - **Styling**: Tailwind CSS for responsive and modern UI
 - **Icons**: React Icons for enhanced UI/UX
 
@@ -68,4 +68,4 @@ License
 This project is open-source and available under the MIT License.
 
 Contact
-For any questions, feel free to reach out at your [email](anoopwilson33@yahoo.com)
+For any questions, feel free to reach out at my [email](anoopwilson33@yahoo.com)
