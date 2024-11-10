@@ -8,6 +8,11 @@ export default function NewsArticles() {
   const { country, query } = useOutletContext();
   const [data, setData] = useState(null);
 
+  const truncateText = (text, maxLength) => {
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength).trim() + '...';
+  };
+
   useEffect(() => {
     async function fetchData() {
       const response = await getNews(query, country);
@@ -26,9 +31,10 @@ export default function NewsArticles() {
             key={article.id || index}
             className="max-w-md mx-auto p-4 rounded-lg shadow-md transition-transform transform hover:scale-105"
           >
-            <img className="w-full h-48 object-cover rounded-md mb-4" src={article.image} alt={article.title} />
+            <img className="w-full h-48 object-cover rounded-md mb-4" src={article.image || `https://res.cloudinary.com/aw96/image/upload/v1731245782/450px-No_image_available.svg_vrtdnt.png)` }
+            alt={article.title} />
             <h2 className="text-xl font-bold text-black-400 mb-2">{article.title}</h2>
-            <p className="text-gray-600 mb-4">{article.description}</p>
+            <p className="text-gray-600 mb-4">{truncateText(article.description, 200)}</p>
             <Link to={article.url} target="_blank" className="self-center">
               <button className="bg-yellow-500 text-gray-900 font-semibold py-2 px-4 rounded-full hover:bg-yellow-600">
                 Read more
