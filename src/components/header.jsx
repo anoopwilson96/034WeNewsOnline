@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
+
 export default function Header({ onUpdate }) {
   const [country, setCountry] = useState('');
   const [query, setQuery] = useState('example');
@@ -84,7 +85,8 @@ export default function Header({ onUpdate }) {
   >
     Search
   </button>
-            </div>
+        </div>
+      
               {/* Country Selector */}
               <select
               name="country"
@@ -98,6 +100,9 @@ export default function Header({ onUpdate }) {
               <option value="in">India</option>
               
             </select>
+
+
+            
           </nav>
 
         </div>
