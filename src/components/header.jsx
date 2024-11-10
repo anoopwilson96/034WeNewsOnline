@@ -34,18 +34,18 @@ export default function Header() {
 
             {/* Navigation Links */}
             <div className="flex space-x-4 text-sm md:text-base">
-              <a href="#politics" className="hover:text-yellow-400 transition-colors">
+              <button value="politics" className="hover:text-yellow-400 transition-colors">
                 Politics
-              </a>
-              <a href="#business" className="hover:text-yellow-400 transition-colors">
+              </button>
+              <button value="business" className="hover:text-yellow-400 transition-colors">
                 Business
-              </a>
-              <a href="#movies" className="hover:text-yellow-400 transition-colors">
+              </button>
+              <button value="movies" className="hover:text-yellow-400 transition-colors">
                 Movies
-              </a>
-              <a href="#tech" className="hover:text-yellow-400 transition-colors">
+              </button>
+              <button value="tech" className="hover:text-yellow-400 transition-colors">
                 Tech
-              </a>
+              </button>
             </div>
                         {/* Search Bar */}
                         <div className="relative md:w-64 w-full">
